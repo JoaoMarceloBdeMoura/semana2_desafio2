@@ -1,8 +1,9 @@
 #entrada de dados
 hp1=999
 hp2=999
+valida = 1
 while (hp1 and hp2) > 0:
-    valida = 1
+    
     while valida == 1:
         #monstro1
         nome1=input("Nome do Monstro:")
@@ -17,6 +18,9 @@ while (hp1 and hp2) > 0:
         #pede pro usuário escrever numero acima de 0 pra atk e hp
         if hp1 <= 0 or hp2 <= 0 or atk1 <= 0 or atk2 <= 0:
             print("ESCREVE DIREITO, VALOR POSITIVO MANO")
+        else:
+            valida = 0    
+            
         
         
             
