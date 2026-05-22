@@ -41,3 +41,20 @@ def contraataque(contraataque,vida):
     hp = vida-contraataque
     print(f"O",nome2,"contra atacou",nome1,"deixando ele com",hp,"de vida!")
     return(hp)
+
+def batalha(atk1,atak2,hp1,hp2):
+    novohp2 = hp2 - atk1
+    novohp1 = hp1 - atak2
+    
+    
+    #verificação de vitória
+    if novohp1 <= 0 and novohp2 <=0:
+        print("Ambos desmaiaram! Tivemos um empate!")
+    elif novohp1 <= 0:
+        print(f"O", nome1,"desmaiou!\n",nome2,"é o vencedor!")
+    elif novohp2 <= 0:
+        print(f"O", nome2,"desmaiou!\n",nome1,"é o vencedor!")
+    else:
+        print(f"O",nome1,"está com",novohp1,"de hp\n","O",nome2,"está com",novohp2,"de hp")
+        print("A batalha continua!")
+    
