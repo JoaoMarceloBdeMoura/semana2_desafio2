@@ -25,3 +25,15 @@ while (hp1 and hp2) > 0:
     #print(nome1,"\nataque:",atk1,"\nhp:",hp1,"\n")
     #print(nome2,"\nataque:",atk2,"\nhp:",hp2)
 
+
+#FUNÇÕES
+def ataque(ataque,vida):
+    hp = vida-ataque
+    print(f"O",nome1,"atacou",nome2,"deixando ele com",hp,"de vida!")
+    return(hp)
+    
+    
+def contraataque(contraataque,vida):
+    hp = vida-contraataque
+    print(f"O",nome2,"contra atacou",nome1,"deixando ele com",hp,"de vida!")
+    return(hp)
