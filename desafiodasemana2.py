@@ -1,5 +1,10 @@
 #FUNÇÕES
 
+def exibir_placar():
+    print("\nPLACAR:")
+    print(nome1, "-", hp1, "HP")
+    print(nome2, "-", hp2, "HP")
+
 def ataque():
     global hp2
 
@@ -11,7 +16,7 @@ def ataque():
         return 0
 
     else:
-        print(f"O {nome1} atacou {nome2} deixando ele com {hp2} de vida!")
+        print(f"O {nome1} atacou {nome2} causando {atk1} de dano e deixando ele com {hp2} de vida!")
         print("A batalha continua!") 
         return hp2
         
@@ -28,7 +33,7 @@ def contraataque():
         return 0
 
     else:
-        print(f"O {nome2} atacou {nome1} deixando ele com {hp1} de vida!")
+        print(f"O {nome2} atacou {nome1} causando {atk2} de dano e deixando ele com {hp1} de vida!")
         print("A batalha continua!") 
         return hp1
 
@@ -63,6 +68,7 @@ while valida == 1:
             print("Que comece o duelo!")
 
             resultado = ataque()
+            exibir_placar()
 
             if resultado == 0:
                 print("Final do duelo")
@@ -70,7 +76,8 @@ while valida == 1:
                 break
 
             resultado = contraataque()
-
+            exibir_placar()
+            
             if resultado == 0:
                 print("Final do duelo")
                 valida = 0
